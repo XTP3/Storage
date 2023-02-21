@@ -4,8 +4,10 @@ A simple engine for easy browser storage interaction.
 ## Usage
 
 ### Setting
+##### Session Storage
 ```Storage.cache("key", cacheData);```
 
+##### Local Storage
 ```Storage.store("key", storeData);```
 
 ### Getting
