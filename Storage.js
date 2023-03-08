@@ -2,11 +2,11 @@ export default class Storage {
     static prefix = "";
 
     static cacheExists(key) {
-        return window.sessionStorage.getItem(this.prefix + key) !== null;
+        return typeof(window.sessionStorage.getItem(this.prefix + key)) !== "object";
     }
 
     static storeExists(key) {
-        return window.localStorage.getItem(this.prefix + key) !== null;
+        return typeof(window.localStorage.getItem(this.prefix + key)) !== "object";
     }
 
     static cache(key, value) {
@@ -18,11 +18,11 @@ export default class Storage {
     }
 
     static getCache(key) {
-        return this.cacheExists(this.prefix + key) ? window.sessionStorage.getItem(this.prefix + key) : false;
+        return window.sessionStorage.getItem(this.prefix + key);
     }
 
     static getStore(key) {
-        return this.storeExists(this.prefix + key) ? window.localStorage.getItem(this.prefix + key) : false;
+        return window.localStorage.getItem(this.prefix + key);
     }
 
     static deleteCache(key) {
