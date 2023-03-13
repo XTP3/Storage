@@ -1,5 +1,5 @@
 # Storage
-A simple engine for easy browser storage interaction.
+A simple engine for easy browser-storage interaction.
 
 ## Usage
 
