@@ -2,11 +2,11 @@ export default class Storage {
     static prefix = "";
 
     static cacheExists(key) {
-        return typeof(window.sessionStorage.getItem(this.prefix + key)) !== "object";
+        return window.sessionStorage.hasOwnProperty(this.prefix + key);
     }
 
     static storeExists(key) {
-        return typeof(window.localStorage.getItem(this.prefix + key)) !== "object";
+        return window.localStorage.hasOwnProperty(this.prefix + key);
     }
 
     static cache(key, value) {
